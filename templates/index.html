@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Inicial</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        img.logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .botao {
+            margin: 20px;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .botao:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- imagem logo -->
+    <img src="{{ url_for('static', filename='quadrangular.jpg') }}" class="logo" alt="Logo Igreja Quadrangular">
+
+    <h1>Seja bem-vindo à nossa igreja!</h1>
+
+    <div class="botoes">
+    <a href="/contatos" class="botao">Contatos</a>
+    <a href="/horarios" class="botao">Horários de Culto</a>
+    <a href="/endereco" target="_blank" class="botao">Endereço</a>
+    <a href="/pedidos" class="botao">Pedidos de Oração</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Acesso Restrito</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <h1 class="titulo">Área Administrativa</h1>
+  <p>Digite a senha para ver os pedidos de oração:</p>
+
+  <form method="post">
+    <input type="password" name="senha" placeholder="Senha" required>
+    <button type="submit" class="botao">Entrar</button>
+  </form>
+
+  {% if erro %}
+    <p style="color: red; margin-top: 20px;">{{ erro }}</p>
+  {% endif %}
+
+  <div style="margin-top: 30px;">
+    <a href="/"><button>Voltar</button></a>
+  </div>
+
+</body>
+</html>

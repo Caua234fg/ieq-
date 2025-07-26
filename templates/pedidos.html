@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedidos de Oração</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <h1 class="titulo">Pedidos de Oração</h1>
+
+  <p>Deixe seu nome e seu pedido abaixo. Estaremos orando por você..</p>
+
+  <form action="/pedidos" method="post" class="form-oracao">
+    <textarea name="mensagem" rows="6" placeholder="Escreva seu pedido aqui..." required></textarea><br>
+    <button type="submit" class="botao">Enviar Pedido</button>
+  </form>
+
+  {% if enviado %}
+    <p style="color: green; margin-top: 20px;">🙏 Pedido enviado com sucesso!</p>
+  {% endif %}
+
+  <div style="margin-top: 30px;">
+    <a href="/"><button>Voltar</button></a>
+  </div>
+
+</body>
+</html>
